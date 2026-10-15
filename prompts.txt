@@ -1,0 +1,10 @@
+- Consider readme.md as the guiding documentation, to be read at the start of every context session and enriched as the project evolves.
+
+- Act as a Senior Data Engineer, PostgreSQL DBA, Snowflake Specialist, and Apache NiFi/Openflow Specialist.
+We are going to perform a full load ingestion of PostgreSQL tables into Snowflake using a custom connector built from scratch.
+
+- Create the necessary Snowflake infrastructure: Service User, Role, and Virtual Warehouse (XSMALL, single cluster, 60s auto-suspend, standard) dedicated to this ingestion workload.
+
+- Assume an active Gen 2 Openflow Deployment is already available. Provision an Openflow Runtime at the smallest tier (Small S1, 1 CPU, 4GB RAM) with an External Access Integration (EAI) attached for PostgreSQL egress.
+
+- For the processor groups and flow logic, reference config_postgres.md and openflow_full_load.md to configure the connection pool, query execution, metadata tracking, and Snowpipe Streaming sink.
